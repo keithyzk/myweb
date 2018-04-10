@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ ariticle.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1><a href="{% url 'blog:edit_page' 0 %}">新文章</a></h1>
+{% for ariticle in ariticles %}
+<a href="{% url 'blog:ariticle_page' ariticle.id %}">{{ ariticle.title }}</a>
+<br/>
+{% endfor %}
+</body>
+</html>
