@@ -82,18 +82,29 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'myweb',
+#         'USER': 'djuser',
+#         'PASSWORD': 'addcn123',
+#         'HOST': '192.168.0.104',
+#         'PORT': '3307',
+#         'CHARSET':  'utf8',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myweb',
-        'USER': 'djuser',
+        'USER': 'yzk',
         'PASSWORD': 'addcn123',
-        'HOST': '192.168.0.104',
+        'HOST': '127.0.0.1',
         'PORT': '3307',
         'CHARSET':  'utf8',
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

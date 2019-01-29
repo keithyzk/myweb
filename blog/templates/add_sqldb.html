@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>添加数据库信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form action="{% url 'blog:addSQLdb' %}" method="post">
+    {% csrf_token %}
+{#    <input type="hidden" name="ariticle_id" value="{{ ariticle.id | default:"0" }}"/>#}
+    <label>ip
+        <input name="ip" value="{{ mysql_list.ip }}"/>
+    </label>
+    <br/>
+    <label>mysqltype
+        <input name="mysqltype" value="{{ mysql_list.mysqltype }}"/>
+    </label>
+    <br/>
+    <label>username
+        <input name="username" value="{{ mysql_list.username }}"/>
+    </label>
+    <br/>
+    <label>password
+        <input name="password" value="{{ mysql_list.password }}"/>
+    </label>
+    <br/>
+    <label>port
+        <input name="port" value="{{ mysql_list.port }}"/>
+    </label>
+    <br/>
+    <label>master_ip
+        <input name="master_ip" value="{{ mysql_list.master_ip }}"/>
+    <label>master_port
+        <input name="master_port" value="{{ mysql_list.master_port }}"/>
+    </label>
+    <br/>
+    </label>
+    <br/>
+    <input type="submit" value="确定提交">
+    </form>
+</body>
+</html>
